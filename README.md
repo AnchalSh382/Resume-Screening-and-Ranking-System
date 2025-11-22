@@ -131,9 +131,9 @@ http://localhost:8501/
 ## 📸 Screenshots (Optional)
 
 > Add screenshots here:
-> <img width="1920" height="1080" alt="Screenshot (538)" src="https://github.com/user-attachments/assets/f83ee829-0d8e-4829-806c-fe7f9af829f2" />
+> <img width="1920" height="1080" alt="Screenshot (540)" src="https://github.com/user-attachments/assets/f83ee829-0d8e-4829-806c-fe7f9af829f2" />
 <img width="1920" height="1080" alt="Screenshot (539)" src="https://github.com/user-attachments/assets/938c25e9-1a40-468a-93ca-0e04d3c77168" />
-<img width="1920" height="1080" alt="Screenshot (540)" src="https://github.com/user-attachments/assets/a490ae2d-326c-4fa1-9508-9361d56bf3d5" />
+<img width="1920" height="1080" alt="Screenshot (538)" src="https://github.com/user-attachments/assets/a490ae2d-326c-4fa1-9508-9361d56bf3d5" />
 
 
 ---
@@ -150,5 +150,6 @@ For major changes, please open an issue first to discuss what you'd like to modi
 This project is open-source and available under the **MIT License**.
 
 ---
+
 
 
