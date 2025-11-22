@@ -1,66 +1,151 @@
-# AI-powered Resume Screening and Ranking System: Streamline Your Hiring Process
-A web-based application that leverages AI to screen and rank resumes based on job descriptions, making your hiring process efficient and effective.
+# 🧠 AI-Powered Resume Screening and Ranking System
 
-# 🖼️ Preview
-![image](https://github.com/user-attachments/assets/1277d71c-9f92-4be0-accc-1f52c75efd9c)
+An intelligent web application that automatically **extracts**, **analyzes**, and **ranks** resumes based on a given **job description**.  
+It uses **modern NLP techniques (Sentence-Transformers)** to evaluate candidate suitability and also supports **PDF + DOCX** resume formats.
 
-# 📑 Project Document
-For a detailed overview of the project, you can refer to the project Document:
-[AI-powered Resume Screening and Ranking System - Project Document](AI-powered-Resume-Screening-and-Ranking-System.pdf)
+Built with **Streamlit**, this tool provides a fast and interactive way to shortlist the best candidates.
 
-# 🚀 Features
-* Resume Screening: Automatically screen resumes based on the provided job description.
-* Candidate Ranking: Rank candidates using AI-powered algorithms for better hiring decisions.
-* PDF Support: Upload resumes in PDF format for seamless processing.
+---
 
-# 🛠 Tech Stack
-> Frontend
-* Streamlit (for building interactive web applications)
-> Backend
-* Python (for server-side operations)
-* PyPDF2 (for extracting text from PDF files)
-* scikit-learn (for text processing and similarity calculations)
+## 🚀 Features
 
-# 📂 Directory Structure
+### ✅ **1. Multi-format Resume Support**
+- Upload multiple **PDF** or **DOCX** resumes
+- Automatic text extraction using:
+  - `PyPDF2` (PDF)
+  - `python-docx` (DOCX)
+
+### ✅ **2. Advanced Resume Ranking**
+Two ranking methods:
+1. **Sentence Transformer Embeddings (Recommended)**  
+   - Uses pretrained model `all-MiniLM-L6-v2`  
+   - Captures semantic meaning (e.g., *“data analysis” ≈ “analytical skills”*)
+
+2. **TF-IDF + Cosine Similarity** (Baseline)  
+   - Keyword-based matching  
+   - Useful for comparison
+
+### ✅ **3. Skill Detection**
+Automatically extracts relevant skills from resumes using a predefined skill list.
+
+### ✅ **4. Clean, Simple Web Interface**
+- Built using **Streamlit**
+- Upload resumes
+- Enter job description
+- Choose ranking method
+- Click **Rank Resumes**
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend & Backend:**  
+- Streamlit (UI + server)
+
+**NLP & Machine Learning:**  
+- Sentence Transformers  
+- Scikit-learn  
+- PyTorch  
+
+**Text Extraction:**  
+- PyPDF2  
+- python-docx  
+
+---
+
+## 📁 Project Structure
+
 ```
-https://github.com/AnchalSh382/Resume-Screening-and-Ranking-System/
-├── Readme.md
-├── AI-powered-Resume-Screening-and-Ranking-System-PPT.pdf
-└── Main.py
- ```
-# 📌 Setup & Installation
 
-1. Clone the Repository
-```
+Resume-Screening-and-Ranking-System/
+│
+├── Main.py                # Main Streamlit application
+├── requirements.txt       # Required Python libraries
+├── README.md              # Project documentation
+└── sample_resumes/        # (Optional) sample PDFs/DOCX resumes
+
+````
+
+---
+
+## ▶️ How to Run the Project
+
+### **1. Clone the repository**
+
+```bash
 git clone https://github.com/AnchalSh382/Resume-Screening-and-Ranking-System.git
 cd Resume-Screening-and-Ranking-System
-```
-2. Install Dependencies
-```
+````
+
+### **2. Install dependencies**
+
+```bash
 pip install -r requirements.txt
 ```
-3. Run the Application
-```
+
+### **3. Run the Streamlit app**
+
+```bash
 streamlit run Main.py
 ```
-4. Access the Application
+
+### **4. Open the app in your browser**
+
+Streamlit will auto-open, usually at:
+
 ```
-Open your browser and navigate to the generated custom URL like http://localhost:8501/ to start using the AI-powered resume screening tool.
+http://localhost:8501/
 ```
 
-# 📜 Key Functions
+---
 
-* extract_text_from_pdf(file): Extracts text from a given PDF file.
-* rank_resumes(job_description, resumes): Ranks resumes based on the provided job description using cosine similarity.
+## 🧪 How It Works
 
-# 💡 Future Enhancements
-✅ Implement support for additional file formats (e.g., DOCX).
+1. **Upload PDF/DOCX resumes**
+2. **Enter job description**
+3. Select ranking method:
 
-✅ Add advanced natural language processing (NLP) techniques for better resume analysis.
+   * *Embeddings (semantic, best)*
+   * *TF-IDF (keyword)*
+4. Click **Rank Resumes**
+5. The app:
 
-✅ Develop a mobile application for on-the-go resume screening and ranking.
+   * Extracts text
+   * Creates embeddings or TF-IDF vectors
+   * Computes similarity
+   * Sorts and displays ranked candidates
+   * Shows detected skills
 
-# 🤝 Contributing
-Feel free to fork and submit pull requests. Any contributions are welcome!
+---
 
-Made with ❤️ by Anchal Shukla
+## 📊 Future Enhancements
+
+* 🔍 Extract structured fields (Name, Email, Experience, Skills)
+* 🧠 Train a fine-tuned model for domain-specific ranking
+* 📈 Download ranking results as CSV
+* 🎨 Improve UI with themes and animations
+* 📝 Add detailed resume summaries
+
+---
+
+## 📸 Screenshots (Optional)
+
+> Add screenshots here:
+> `/screenshots/home.png`
+> `/screenshots/ranked.png`
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you'd like to modify.
+
+---
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
