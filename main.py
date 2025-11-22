@@ -9,9 +9,8 @@ from sentence_transformers import SentenceTransformer, util
 import docx
 
 
-# -----------------------------
+
 # Text Extraction Functions
-# -----------------------------
 
 def extract_text_from_pdf(file):
     """Extract text from a PDF file-like object."""
