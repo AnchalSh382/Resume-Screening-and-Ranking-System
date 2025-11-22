@@ -1,0 +1,10 @@
+streamlit
+PyPDF2
+python-docx
+scikit-learn
+sentence-transformers
+torch        # Required for sentence-transformers
+numpy
+
+
+
